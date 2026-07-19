@@ -3,8 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abby Rayne Stovall — Logic Developer &amp; Researcher</title>
-<meta name="description" content="Rayne Stovall — Logic Developer &amp; Researcher. Portfolio of rule-based systems, UX research, and product work.">
+<title>Abby Rayne Stovall — Logic Developer &amp; Creative Technologist</title>
+<meta name="description" content="Abby Rayne Stovall — Logic Developer &amp; Creative Technologist. Portfolio of rule-based systems, LLM prompt logic, UX research, and interactive/game design work.">
+<link rel="canonical" href="https://araynestovall.github.io/RaynesPortfolio/">
+<link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abby Rayne Stovall",
+  "alternateName": "Rayne Stovall",
+  "jobTitle": "Logic Developer & Creative Technologist",
+  "url": "https://araynestovall.github.io/RaynesPortfolio/",
+  "email": "mailto:raynestovall02@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/abbyraynestovall/",
+    "https://github.com/ARayneStovall"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Wellesley College"
+  },
+  "knowsAbout": [
+    "Boolean rule design",
+    "LLM prompt engineering",
+    "Python",
+    "Go",
+    "UX research",
+    "Game design",
+    "Three.js",
+    "Unity"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -145,6 +176,12 @@
   .role-item ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;}
   .role-item li{margin-bottom:6px;}
 
+  .sub-role + .sub-role{margin-top:22px; padding-top:18px; border-top:1px solid var(--line);}
+  .sub-role-head{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px;}
+  .sub-role-head h4{font-family:'Newsreader', serif; font-weight:500; font-size:17px; margin:0;}
+  .sub-dates{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); display:block; white-space:nowrap;}
+  .sub-role-head .sub-dates{display:inline;}
+
   /* ---- projects ---- */
   .case{
     background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
@@ -225,17 +262,6 @@
     border-color:transparent transparent transparent var(--ink);
   }
 
-  .minor-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px;}
-  .minor-card{
-    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px;
-  }
-  .minor-card h4{font-family:'Newsreader', serif; font-weight:500; font-size:18px; margin-bottom:6px;}
-  .minor-card p{color:var(--ink-soft); font-size:14px; margin:0 0 10px;}
-  .card-video{
-    position:relative;
-    border-radius:2px; overflow:hidden; margin-bottom:14px; border:1px solid var(--line); line-height:0;
-  }
-  .card-video video{width:100%; display:block; max-height:220px; object-fit:cover;}
   .stack{display:flex; gap:6px; flex-wrap:wrap;}
   .stack span{
     font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--ink-soft);
@@ -275,7 +301,6 @@
     #about .grid{grid-template-columns:1fr;}
     .skill-grid{grid-template-columns:1fr;}
     .role-item{grid-template-columns:1fr; gap:6px;}
-    .minor-grid{grid-template-columns:1fr;}
     .contact-card{flex-direction:column; align-items:flex-start;}
     .fact-list .v{text-align:left;}
     .fact-list li{flex-direction:column; gap:2px;}
@@ -304,9 +329,9 @@
 <main class="wrap">
 
   <section class="hero">
-    <div class="eyebrow">Logic Developer &amp; Researcher</div>
-    <h1>I turn messy human criteria into <em>rules</em> a system can actually run on.</h1>
-    <p class="role">Abby Rayne Stovall — Logic Developer building rule-based decision systems and LLM prompt logic in Python and Go, holding 95% accuracy at production scale. Wellesley College, B.A. Media Arts &amp; Sciences.</p>
+    <div class="eyebrow">Logic Developer &amp; Creative Technologist</div>
+    <h1>I turn messy human criteria into <em>rules</em> — and messy ideas into <em>interfaces</em> people actually want to use.</h1>
+    <p class="role">Abby Rayne Stovall — Logic Developer building rule-based decision systems and LLM prompt logic in Python and Go, holding 95% accuracy at production scale, alongside UX research and interactive/game design work in Unity and Three.js. Wellesley College, B.A. Media Arts &amp; Sciences.</p>
 
     <div class="hero-rule">
       <div class="rule-line"><span class="tag if">IF</span><span class="body-text">a process depends on a person reading fine print and making a judgment call</span></div>
@@ -329,12 +354,13 @@
       <div>
         <p>I build the rule-based logic that healthcare and finance platforms run their decisions on. At Notable Systems, I architect the boolean rules and LLM prompts behind automated approval/denial recommendations, holding 95% accuracy across client implementations — then write the Python and shell scripts to test that logic at scale before it ships.</p>
         <p>Most of the job is translation: a client hands over a page of criteria written for a human reviewer, and I turn it into logic that runs correctly, every time, without a person in the loop. That instinct for turning ambiguous rules into something precise goes back to teaching first grade, and sharpened further through UX research — my senior project, LinguaGemma, won a CHI undergraduate research award for studying how people actually learn from a system, not just how the system was designed to teach.</p>
-        <p>I'm looking for the next version of this work: logic development, rule engineering, or AI prompt roles where precision and troubleshooting are the job.</p>
+        <p>The same instinct shows up on the creative side too: building playable, interactive 3D work in Unity and Three.js, where the "rules" are game mechanics and interaction logic instead of claims criteria — same precision, different material.</p>
+        <p>I'm looking for the next version of this work: logic development, rule engineering, and AI prompt roles; UX and game/interactive design roles; or project/product management roles where translating ambiguous requirements into a plan people can actually execute is the job.</p>
       </div>
       <ul class="fact-list">
         <li><span class="k">Based</span><span class="v">Remote / US</span></li>
         <li><span class="k">Education</span><span class="v">B.A. Media Arts &amp; Sciences, Wellesley College</span></li>
-        <li><span class="k">Currently</span><span class="v">Logic Developer, Notable Systems</span></li>
+        <li><span class="k">Currently</span><span class="v">Open to new opportunities</span></li>
         <li><span class="k">Languages</span><span class="v">Python, Go, JavaScript, C#</span></li>
         <li><span class="k">Also</span><span class="v">Shell/Unix, LLM prompt design, CSV/data pipelines</span></li>
       </ul>
@@ -349,24 +375,43 @@
     <div class="timeline">
 
       <div class="role-item">
-        <div class="meta">2024<span class="status">● Current</span></div>
+        <div class="meta">2025 – 2026</div>
         <div>
-          <h3>Logic Developer &amp; AI Prompt Specialist</h3>
           <div class="org">Notable Systems — Remote</div>
-          <ul>
-            <li>Architect boolean decision rules for automated claim approval/denial recommendations, holding 95% accuracy across client implementations</li>
-            <li>Design and refine LLM prompts that drive rule-based logic, then QA the results to catch false positives and negatives</li>
-            <li>Partner directly with Client Success to translate each client's approval criteria into working logic</li>
-            <li>Write Python and shell scripts for large-scale testing, record management, and data formatting</li>
-          </ul>
+
+          <div class="sub-role">
+            <div class="sub-role-head">
+              <h4>AI Prompt Specialist</h4>
+              <span class="sub-dates">Mar 2026 – Jul 2026</span>
+            </div>
+            <ul>
+              <li>Developed data extraction scripts for the Order Intake product to pull critical information from unstructured medical documents, directly improving product efficiency and data integrity</li>
+              <li>Designed and iterated LLM prompts to encode PGS decision criteria, refining wording based on model behavior and edge cases</li>
+              <li>Redesigned the Asana workflow and project management boards for the AI Prompt team, streamlining task tracking and giving stakeholders clear visibility into project dependencies and delivery timelines</li>
+            </ul>
+          </div>
+
+          <div class="sub-role">
+            <div class="sub-role-head">
+              <h4>Business Rules Developer</h4>
+              <span class="sub-dates">Mar 2025 – Mar 2026</span>
+            </div>
+            <ul>
+              <li>Architected and implemented complex logical rules for the Payor Greenlight System (PGS), achieving 95% accuracy in automated insurance billing recommendations</li>
+              <li>Partnered with Client Success and Engineering teams to translate client needs into technical specifications, processing and organizing client data — including CSV conversion — to ensure custom product builds align with end-user goals</li>
+              <li>Developed shell and Python scripts for large-scale testing, record management, and client-data analysis</li>
+              <li>Managed file operations and version control to maintain data integrity across rule implementations</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="role-item">
-        <div class="meta">2024</div>
+        <div class="meta">2024 – 2025</div>
         <div>
           <h3>First Grade Teacher</h3>
           <div class="org">Success Academy Union Square — New York, NY</div>
+          <div class="sub-dates" style="margin-bottom:10px;">Jul 2024 – Mar 2025</div>
           <ul>
             <li>Designed and delivered science and core curriculum lessons for first grade and kindergarten students</li>
             <li>Partnered with families and colleagues to track progress and adjust strategy for individual students</li>
@@ -379,6 +424,7 @@
         <div>
           <h3>Computing Help Desk Student Worker</h3>
           <div class="org">Wellesley College — Wellesley, MA</div>
+          <div class="sub-dates" style="margin-bottom:10px;">Oct 2023 – May 2024</div>
           <ul>
             <li>Provided technical support to students, faculty, and alumni, resolving issues to keep workflows uninterrupted</li>
             <li>Managed check-in/check-out and inventory of technology equipment</li>
@@ -429,7 +475,7 @@
         <div class="rule-line"><span class="tag and">AND</span><span class="body-text">different rule sets should produce measurably different outcomes</span></div>
         <div class="rule-line"><span class="tag then">THEN</span><span class="body-text">build two prompt logics and test them head-to-head</span></div>
       </div>
-      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Designed and hosted the chatbot locally, engineering separate prompt logic for a growth-mindset agent and a fixed-mindset control. Measured impact with word-search recall tests plus thematic and semantic analysis of chat logs — the growth-mindset logic outperformed on comfort, confidence, and engagement, winning the 2024 CHI undergraduate research competition. Built in collaboration with two classmates.</p>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Designed and hosted the chatbot locally, engineering separate prompt logic for a growth-mindset agent and a fixed-mindset control. Measured impact with word-search recall tests plus thematic and semantic analysis of chat logs — the growth-mindset logic outperformed on comfort, confidence, and engagement, winning the 2024 CHI undergraduate research competition. Built alongside two classmates, helping coordinate the study design and build timeline across the team.</p>
       <div class="poster-wrap">
         <button type="button" class="poster-btn" onclick="openLightbox(this.querySelector('img').src)">
           <img src="media/linguagemma-poster.png" alt="Full LinguaGemma research poster" loading="lazy">
@@ -460,29 +506,46 @@
       </div>
     </div>
 
-    <div class="minor-grid">
-      <div class="minor-card">
-        <div class="card-video">
-          <video playsinline preload="none" poster="media/in-a-jam-poster.jpg">
-            <source src="media/in-a-jam.mp4" type="video/mp4">
-          </video>
-          <button type="button" class="play-btn" aria-label="Play In A Jam! demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
-        </div>
-        <h4>In A Jam!</h4>
-        <p>A 3D game where you get sucked into a printer mid paper-jam and have to navigate the town of Toneronto. Handled scripting, environment and character work, animation, sound, and cutscenes.</p>
-        <div class="stack"><span>Unity</span><span>C#</span><span>3D Animation</span></div>
+    <div class="case">
+      <span class="case-badge">Game Design · 3D Animation · Unity</span>
+      <div class="case-head">
+        <h3>In A Jam!</h3>
       </div>
-      <div class="minor-card">
-        <div class="card-video">
-          <video playsinline preload="none" poster="media/vending-machine-poster.jpg">
-            <source src="media/vending-machine.mp4" type="video/mp4">
-          </video>
-          <button type="button" class="play-btn" aria-label="Play Interactive Vending Machine demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
-        </div>
-        <h4>Interactive Vending Machine</h4>
-        <p>A fully modeled, animated 3D vending machine built for the web — dynamic lighting, keyframed interactions, and a door-open sequence tuned for feel.</p>
-        <div class="stack"><span>Three.js</span><span>JavaScript</span><span>WebGL</span></div>
+      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A 3D game where you get sucked into a printer mid paper-jam and have to navigate the town of Toneronto.</p>
+      <div class="case-rules">
+        <div class="rule-line"><span class="tag if">IF</span><span class="body-text">a player gets sucked into a printer mid paper-jam</span></div>
+        <div class="rule-line"><span class="tag and">AND</span><span class="body-text">the whole world has to sell that premise — town, characters, sound, cutscenes</span></div>
+        <div class="rule-line"><span class="tag then">THEN</span><span class="body-text">build every layer of it, not just the mechanics</span></div>
       </div>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Handled scripting, environment and character work, animation, sound, and cutscenes.</p>
+      <div class="case-video">
+        <video playsinline preload="none" poster="media/in-a-jam-poster.jpg">
+          <source src="media/in-a-jam.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="play-btn" aria-label="Play In A Jam! demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
+      </div>
+      <div class="stack" style="margin-top:16px;"><span>Unity</span><span>C#</span><span>3D Animation</span></div>
+    </div>
+
+    <div class="case">
+      <span class="case-badge">3D Web · Interaction Design · Three.js</span>
+      <div class="case-head">
+        <h3>Interactive Vending Machine</h3>
+      </div>
+      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A fully modeled, animated 3D vending machine built for the web.</p>
+      <div class="case-rules">
+        <div class="rule-line"><span class="tag if">IF</span><span class="body-text">an interaction runs in a browser instead of a game engine</span></div>
+        <div class="rule-line"><span class="tag and">AND</span><span class="body-text">it still needs to feel physical — lighting, motion, timing</span></div>
+        <div class="rule-line"><span class="tag then">THEN</span><span class="body-text">model, light, and keyframe it by hand until it does</span></div>
+      </div>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Dynamic lighting, keyframed interactions, and a door-open sequence tuned for feel.</p>
+      <div class="case-video">
+        <video playsinline preload="none" poster="media/vending-machine-poster.jpg">
+          <source src="media/vending-machine.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="play-btn" aria-label="Play Interactive Vending Machine demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
+      </div>
+      <div class="stack" style="margin-top:16px;"><span>Three.js</span><span>JavaScript</span><span>WebGL</span></div>
     </div>
   </section>
 
@@ -505,10 +568,10 @@
       <div class="skill-col">
         <div class="eyebrow">Research &amp; Product</div>
         <ul>
-          <li>User study design</li>
-          <li>Thematic &amp; semantic analysis</li>
           <li>Stakeholder communication</li>
           <li>Workflow &amp; project management</li>
+          <li>User study design</li>
+          <li>Thematic &amp; semantic analysis</li>
           <li>Data processing (CSV, records)</li>
         </ul>
       </div>
