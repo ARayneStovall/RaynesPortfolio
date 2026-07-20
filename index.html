@@ -104,6 +104,11 @@
 
   /* ---- hero ---- */
   .hero{padding:88px 0 64px;}
+  .hero-photo{
+    display:block; width:120px; height:120px; margin:0 auto 24px;
+    border-radius:50%; object-fit:cover;
+    border:3px solid var(--surface); box-shadow:0 4px 18px rgba(30,33,72,0.18);
+  }
   .hero .eyebrow{justify-content:center;}
   .hero .eyebrow::after{content:""; width:22px; height:1px; background:var(--teal);}
   .hero h1{font-size:clamp(34px, 5.4vw, 54px); line-height:1.12; max-width:26ch; text-align:center; margin-left:auto; margin-right:auto;}
@@ -111,6 +116,7 @@
   .hero .role{
     font-family:'IBM Plex Mono', monospace;
     font-size:14px; color:var(--ink-soft); margin-top:18px; max-width:46ch;
+    text-align:center; margin-left:auto; margin-right:auto;
   }
   .hero-cta{margin-top:42px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap;}
   .btn{
@@ -310,6 +316,7 @@
 <main class="wrap">
 
   <section class="hero">
+    <img class="hero-photo" src="media/headshot.jpg" alt="Photo of Abby Rayne Stovall">
     <div class="eyebrow">Logic Developer &amp; Creative Technologist</div>
     <h1>I translate complex human criteria into clear <em>rules</em> and transform abstract ideas into user-friendly <em>interfaces</em>.</h1>
     <p class="role">I'm a Logic Developer specializing in rule-based decision systems and LLM prompt logic using Python and Go, achieving 95% accuracy at production scale. Additional experience includes UX research and interactive/game design in Unity and Three.js. Wellesley College, B.A. Media Arts &amp; Sciences.</p>
