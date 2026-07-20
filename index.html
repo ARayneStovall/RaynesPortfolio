@@ -42,16 +42,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #F4F6F4;
+    --bg: #F2F5ED;
     --surface: #FFFFFF;
-    --ink: #1B2430;
-    --ink-soft: #55606B;
-    --ink-faint: #8A939C;
-    --teal: #2F6E68;
-    --teal-tint: #E4EEEC;
-    --gold: #B9862F;
-    --gold-tint: #F4EADA;
-    --line: #DDE3E1;
+    --ink: #1E2148;
+    --ink-soft: #545A72;
+    --ink-faint: #8A8FA0;
+    --teal: #3B6E8F;
+    --teal-tint: #E2EEF3;
+    --gold: #D08268;
+    --line: #DCE3DE;
     --radius: 3px;
     --max: 920px;
   }
@@ -80,25 +79,10 @@
   }
   .eyebrow::before{content:""; width:22px; height:1px; background:var(--teal);}
 
-  /* ---- rule chip / logic motif ---- */
-  .tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    font-weight:500;
-    letter-spacing:0.06em;
-    padding:2px 8px;
-    border-radius:2px;
-    display:inline-block;
-    line-height:1.7;
-  }
-  .tag.if{ background:var(--teal-tint); color:var(--teal); }
-  .tag.and{ background:transparent; color:var(--ink-faint); border:1px solid var(--line); }
-  .tag.then{ background:var(--gold-tint); color:var(--gold); }
-
   /* ---- nav ---- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(244,246,244,0.88);
+    background:rgba(242,245,237,0.88);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -133,8 +117,7 @@
     padding:22px 24px;
     max-width:640px;
   }
-  .rule-line{margin:6px 0; font-size:15px;}
-  .rule-line .body-text{margin-left:8px;}
+  .hero-rule p{margin:0; font-size:15px; color:var(--ink-soft);}
   .hero-cta{margin-top:34px; display:flex; gap:14px; flex-wrap:wrap;}
   .btn{
     font-family:'IBM Plex Mono', monospace;
@@ -203,9 +186,6 @@
     color:var(--teal); border:1px solid var(--teal-tint); background:var(--teal-tint);
     padding:3px 9px; border-radius:2px; margin-bottom:10px; display:inline-block;
   }
-  .case-rules .rule-line{font-size:14.5px; margin:9px 0;}
-  .case-rules{border-top:1px solid var(--line); padding-top:16px; margin-top:4px;}
-
   .case-video{
     position:relative;
     border-radius:2px; overflow:hidden; margin-top:20px; border:1px solid var(--line); line-height:0;
@@ -229,7 +209,7 @@
   }
 
   .lightbox{
-    display:none; position:fixed; inset:0; background:rgba(20,24,31,0.92); z-index:100;
+    display:none; position:fixed; inset:0; background:rgba(20,20,45,0.92); z-index:100;
     align-items:center; justify-content:center; padding:40px; cursor:zoom-out;
   }
   .lightbox.open{display:flex;}
@@ -251,7 +231,7 @@
   .play-btn{
     all:unset; position:absolute; inset:0; z-index:1;
     display:flex; align-items:center; justify-content:center;
-    cursor:pointer; background:rgba(27,36,48,0.12);
+    cursor:pointer; background:rgba(30,33,72,0.12);
   }
   .play-btn .play-icon{
     width:56px; height:56px; border-radius:50%;
@@ -339,9 +319,7 @@
     <p class="role">I'm a Logic Developer specializing in rule-based decision systems and LLM prompt logic using Python and Go, achieving 95% accuracy at production scale. Additional experience includes UX research and interactive/game design in Unity and Three.js. Wellesley College, B.A. Media Arts &amp; Sciences.</p>
 
     <div class="hero-rule">
-      <div class="rule-line"><span class="tag if">IF</span><span class="body-text">a process relies on someone reading fine print and making a judgment call</span></div>
-      <div class="rule-line"><span class="tag and">AND</span><span class="body-text">that judgment must be made accurately thousands of times each day</span></div>
-      <div class="rule-line"><span class="tag then">THEN</span><span class="body-text">that is the type of logic I develop.</span></div>
+      <p>If a process depends on someone reading fine print and making a judgment call, and that judgment has to be made accurately thousands of times a day, that's the kind of logic I build.</p>
     </div>
 
     <div class="hero-cta">
@@ -404,7 +382,8 @@
               <span class="sub-dates">Mar 2025 – Mar 2026</span>
             </div>
             <ul>
-              <li>Coded, iterated upon, and refined LLM prompts to create logic-based rules for several different Durable Medical Equipment (DME) products and insurance providers within our Claims Manager system, addressing edge cases across a wide array of requirements and scenarios to achieve 95% accuracy in automated insurance billing recommendations</li>
+              <li>Coded, iterated upon, and refined LLM prompts to create logic-based rules for several different Durable Medical Equipment (DME) products and insurance providers within our Claims Manager system</li>
+              <li>Addressed edge cases across a wide array of requirements and scenarios to achieve 95% accuracy in automated insurance billing recommendations</li>
               <li>Communicated with Client Success and Engineering teams to turn client needs into logical rule systems, ensuring custom product builds match stakeholder goals</li>
               <li>Managed file operations and version control to maintain data integrity throughout rule implementations</li>
             </ul>
@@ -471,11 +450,7 @@
         </div>
       </div>
       <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">An LLM-based chatbot with two distinct prompt-driven teaching logics, benchmarked against each other in a controlled study.</p>
-      <div class="case-rules">
-        <div class="rule-line"><span class="tag if">IF</span><span class="body-text">a chatbot's "personality" is defined by its prompt-level rules</span></div>
-        <div class="rule-line"><span class="tag and">AND</span><span class="body-text">different rule sets are expected to produce measurable differences in outcomes</span></div>
-        <div class="rule-line"><span class="tag then">THEN</span><span class="body-text">build two prompt logics and compare them directly</span></div>
-      </div>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:9px 0 0;">A chatbot's "personality" is really just its prompt-level rules, and different rule sets should produce measurably different outcomes — so we built two prompt logics and compared them directly.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Designed and hosted the chatbot locally, developing separate prompt logic for a growth-mindset agent and a fixed-mindset control. Assessed impact using word-search recall tests and thematic and semantic analysis of chat logs. The growth-mindset logic demonstrated higher comfort, confidence, and engagement, winning the 2024 CHI undergraduate research competition. Collaborated with two classmates, coordinating study design and project timeline.</p>
 
       <div class="reel" style="margin-top:20px; margin-bottom:8px;">
@@ -595,6 +570,7 @@
       <div class="contact-links">
         <a href="mailto:raynestovall02@gmail.com">raynestovall02@gmail.com</a>
         <a href="https://www.linkedin.com/in/abbyraynestovall/" target="_blank" rel="noopener">linkedin.com/in/abbyraynestovall ↗</a>
+        <a href="media/Abby-Rayne-Stovall-Resume.pdf" target="_blank" rel="noopener">Download résumé ↗</a>
       </div>
     </div>
   </section>
