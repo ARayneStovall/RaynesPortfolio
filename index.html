@@ -7,6 +7,16 @@
 <meta name="description" content="Abby Rayne Stovall — AI Engineer &amp; Creative Technologist. Portfolio of LLM prompt engineering, rule-based systems, UX research, and interactive/game design work.">
 <link rel="canonical" href="https://araynestovall.github.io/RaynesPortfolio/">
 <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="PpDJOOAaZzGlbcFGIo6IEC8iiCu7tFUrhnBKIcQ_i5g" />
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTPV53265L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTPV53265L');
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,6 +64,10 @@
     --teal-tint: #E2EEF3;
     --gold: #D08268;
     --line: #DCE3DE;
+
+    --gauge-coral: #FF8274;
+    --gauge-rose: #D53C6A;
+    --gauge-rose-tint: #FBE1E8;
     --radius: 3px;
     --max: 1100px;
   }
@@ -260,6 +274,16 @@
     border:1px solid var(--line); padding:2px 7px; border-radius:2px;
   }
 
+  /* gaugeCalc card — nods to the app's own coral/rose palette */
+  .case--gauge{position:relative; overflow:hidden;}
+  .case--gauge::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, var(--gauge-coral), var(--gauge-rose));
+  }
+  .case--gauge .case-badge{color:var(--gauge-rose); border-color:var(--gauge-rose-tint); background:var(--gauge-rose-tint);}
+  .case--gauge .case-link{color:var(--gauge-rose); border-bottom-color:var(--gauge-rose-tint);}
+  .case--gauge .case-link:hover{border-color:var(--gauge-coral);}
+
   /* ---- skills ---- */
   .skill-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
   .skill-col{border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:22px 18px;}
@@ -448,7 +472,7 @@
       <h2>Case studies &amp; builds.</h2>
     </div>
 
-    <div class="case">
+    <div class="case case--gauge">
       <span class="case-badge">Full-Stack Web App · LLM + Deterministic Logic · Work in Progress</span>
       <div class="case-head">
         <h3>gaugeCalc</h3>
