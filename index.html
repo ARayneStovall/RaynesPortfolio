@@ -345,6 +345,7 @@
       <div>
         <p>I design LLM prompts and rule-based logic that drive decision-making for healthcare insurance platforms. At Notable Systems, I built boolean rules and LLM prompts for automated approval and denial recommendations. I also wrote Python and shell scripts to test this logic at scale before deployment.</p>
         <p>Much of my work involves converting client criteria, originally intended for human reviewers, into logic that operates reliably and autonomously. My ability to clarify ambiguity began with UX research and was further refined through teaching K-1 science. My senior project, LinguaGemma, received a CHI undergraduate research award for examining how users truly learn from a system, beyond its intended instructional design.</p>
+        <p>I took a similar hybrid approach when building gaugeCalc, a tool I created to recalculate knitting patterns. I use LLMs for tasks that need interpretation, and rely on deterministic code for anything that must be precise. For instance, Claude converts unstructured pattern text into structured data, while the rescaling math is done by deterministic code. This setup helps make sure the numbers that need to be right are always accurate.</p>
         <p>This skill also extends to creative projects, such as developing interactive 3D experiences in Unity and Three.js. In these contexts, I apply the same precision to game mechanics and interaction logic as I do to claims criteria.</p>
         <p>I am seeking new opportunities in AI systems engineering and LLM application development, as well as UX and interactive/game design roles. My focus is on roles that require turning ambiguous requirements into actionable plans.</p>
       </div>
@@ -457,7 +458,7 @@
           <a class="case-link" href="https://github.com/ARayneStovall/gauge-calc" target="_blank" rel="noopener">View repo ↗</a>
         </div>
       </div>
-      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A tool for knitters and crocheters that recalculates a PDF pattern's stitch and row counts for a different gauge, stamping the corrected numbers directly onto the original pattern.</p>
+      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A tool for knitters and crocheters that recalculates a PDF pattern's stitch and row counts for a different gauge, stamping the corrected numbers directly onto the original pattern. Knitting and crocheting are genuine hobbies of mine — this started as a way to solve my own gauge-swapping headaches, not just a demo topic.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Claude parses the raw pattern text into structured gauge and section data; deterministic code handles the actual rescaling and rounding math. A React frontend uploads the pattern and gauge to an Express backend, which extracts, rescales, and stamps the corrected values back onto the original PDF at the right position.</p>
       <div class="stack" style="margin-top:16px;"><span>TypeScript</span><span>Node.js</span><span>Express</span><span>React</span><span>Claude API</span><span>pdfjs-dist</span><span>pdf-lib</span></div>
     </div>
@@ -563,6 +564,8 @@
         <div class="eyebrow">AI &amp; Systems</div>
         <ul>
           <li>LLM prompt engineering</li>
+          <li>System prompting</li>
+          <li>Agentic AI patterns</li>
           <li>Claude Code</li>
           <li>Claude API</li>
           <li>Regex</li>
