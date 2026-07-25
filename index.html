@@ -55,30 +55,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #130208;
-    --surface: #31051E;
-    --ink: #1F0510;
-    --text: #F6E9E6;
-    --ink-soft: #CAA2AB;
-    --ink-faint: #9C7581;
-    --teal: #FF8274;
-    --teal-tint: rgba(213,60,106,0.16);
-    --gold: #D53C6A;
-    --line: #7C183C;
+    --bg: #FBF5EF;
+    --surface: #F2D3AB;
+    --ink: #272744;
+    --ink-soft: #494D7E;
+    --ink-faint: rgba(39,39,68,0.55);
+    --teal: #8B6D9C;
+    --teal-tint: rgba(139,109,156,0.14);
+    --gold: #C69FA5;
+    --line: rgba(198,159,165,0.35);
 
-    --gauge-coral: #FF8274;
-    --gauge-rose: #D53C6A;
-    --gauge-rose-tint: rgba(213,60,106,0.18);
     --radius: 3px;
     --max: 1100px;
-    color-scheme: dark;
+    color-scheme: light;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
     background:radial-gradient(circle at 50% -10%, var(--surface), var(--bg) 60%);
-    color:var(--text);
+    color:var(--ink);
     font-family:'IBM Plex Sans', -apple-system, sans-serif;
     font-size:16px;
     line-height:1.6;
@@ -101,7 +97,7 @@
   /* ---- nav ---- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(19,2,8,0.88);
+    background:rgba(251,245,239,0.88);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -128,7 +124,7 @@
   .hero-photo{
     display:block; width:88px; height:88px; flex-shrink:0;
     border-radius:50%; object-fit:cover;
-    border:3px solid var(--surface); box-shadow:0 4px 18px rgba(255,130,116,0.18);
+    border:3px solid var(--surface); box-shadow:0 4px 18px rgba(39,39,68,0.18);
   }
   .hero .eyebrow{justify-content:center;}
   .hero .eyebrow::after{content:""; width:22px; height:1px; background:var(--teal);}
@@ -146,10 +142,10 @@
     display:inline-block; transition:all .15s ease;
     border:1px solid var(--ink);
   }
-  .btn.solid{background:linear-gradient(135deg, var(--gauge-coral), var(--gauge-rose)); color:var(--ink); border-color:transparent;}
-  .btn.solid:hover{filter:brightness(1.1);}
-  .btn.outline{color:var(--teal); border-color:var(--teal); background:transparent;}
-  .btn.outline:hover{background:var(--teal); color:var(--ink);}
+  .btn.solid{background:var(--ink); color:var(--bg);}
+  .btn.solid:hover{background:var(--teal); border-color:var(--teal);}
+  .btn.outline{color:var(--ink); border-color:var(--line); background:transparent;}
+  .btn.outline:hover{border-color:var(--ink);}
 
   section{padding:64px 0;}
   .section-head{margin-bottom:36px; text-align:center;}
@@ -258,7 +254,7 @@
   .play-btn{
     all:unset; position:absolute; inset:0; z-index:1;
     display:flex; align-items:center; justify-content:center;
-    cursor:pointer; background:rgba(30,33,72,0.12);
+    cursor:pointer; background:rgba(39,39,68,0.12);
   }
   .play-btn .play-icon{
     width:56px; height:56px; border-radius:50%;
@@ -280,16 +276,6 @@
     border:1px solid var(--line); padding:2px 7px; border-radius:2px;
   }
 
-  /* gaugeCalc card — nods to the app's own coral/rose palette */
-  .case--gauge{position:relative; overflow:hidden;}
-  .case--gauge::before{
-    content:""; position:absolute; top:0; left:0; right:0; height:3px;
-    background:linear-gradient(90deg, var(--gauge-coral), var(--gauge-rose));
-  }
-  .case--gauge .case-badge{color:var(--gauge-rose); border-color:var(--gauge-rose-tint); background:var(--gauge-rose-tint);}
-  .case--gauge .case-link{color:var(--gauge-rose); border-bottom-color:var(--gauge-rose-tint);}
-  .case--gauge .case-link:hover{border-color:var(--gauge-coral);}
-
   /* ---- skills ---- */
   .skill-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line);}
   .skill-col{border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:22px 18px;}
@@ -300,7 +286,7 @@
   /* ---- contact ---- */
   #contact{padding-bottom:110px;}
   .contact-card{
-    background:var(--ink); color:var(--text); border-radius:var(--radius);
+    background:var(--ink); color:var(--bg); border-radius:var(--radius);
     padding:52px 44px; display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;
   }
   .contact-card h2{color:#fff; font-size:28px; max-width:38ch;}
@@ -479,7 +465,7 @@
       <h2>Case studies &amp; builds.</h2>
     </div>
 
-    <div class="case case--gauge">
+    <div class="case">
       <span class="case-badge">Full-Stack Web App · LLM + Deterministic Logic · Work in Progress</span>
       <div class="case-head">
         <h3>gaugeCalc</h3>
