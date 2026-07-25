@@ -74,17 +74,16 @@
   @media (prefers-color-scheme: dark){
     :root{
       --bg: #260D34;
-      --surface: #87286A;
+      --surface: #4F2D45;
       --text: #FFFFFF;
       --ink-soft: rgba(255,255,255,0.7);
       --ink-faint: rgba(255,255,255,0.55);
-      --teal: #FE6C90;
-      --teal-tint: rgba(254,108,144,0.16);
-      --gold: #FE6C90;
-      --line: rgba(255,255,255,0.14);
-      --panel: #87286A;
+      --teal: #E95490;
+      --teal-tint: rgba(233,84,144,0.16);
+      --gold: #E95490;
+      --line: rgba(255,255,255,0.18);
+      --panel: #663457;
     }
-    header{background:rgba(38,13,52,0.88);}
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -117,6 +116,9 @@
     background:rgba(255,255,255,0.88);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
+  }
+  @media (prefers-color-scheme: dark){
+    header{background:rgba(38,13,52,0.88);}
   }
   nav{
     display:flex; align-items:center; justify-content:space-between;
@@ -510,6 +512,7 @@
       <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">An LLM-based chatbot with two distinct prompt-driven teaching logics, benchmarked against each other in a controlled study.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:9px 0 0;">A chatbot's "personality" is really just its prompt-level rules, and different rule sets should produce measurably different outcomes — so we built two prompt logics and compared them directly.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Designed and hosted the chatbot locally, developing separate prompt logic for a growth-mindset agent and a fixed-mindset control. Assessed impact using word-search recall tests and thematic and semantic analysis of chat logs. The growth-mindset logic demonstrated higher comfort, confidence, and engagement, winning the 2024 CHI undergraduate research competition. Collaborated with two classmates, coordinating study design and project timeline.</p>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:9px 0 0;">Published as "Exploring LLM-based Chatbot for Language Learning and Cultivation of Growth Mindset" at CHI EA '24 (DOI: <a href="https://dl.acm.org/doi/10.1145/3613905.3648628" target="_blank" rel="noopener">10.1145/3613905.3648628</a>).</p>
 
       <div class="reel" style="margin-top:20px; margin-bottom:8px;">
         <video playsinline preload="none" poster="media/reel-poster.jpg">
