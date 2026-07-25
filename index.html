@@ -55,26 +55,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #FBF5EF;
-    --surface: #F2D3AB;
-    --ink: #272744;
-    --ink-soft: #494D7E;
-    --ink-faint: rgba(39,39,68,0.55);
-    --teal: #8B6D9C;
-    --teal-tint: rgba(139,109,156,0.14);
-    --gold: #C69FA5;
-    --line: rgba(198,159,165,0.35);
+    --bg: #282D3C;
+    --surface: #5B5D70;
+    --ink: #282D3C;
+    --text: #FFC4B8;
+    --ink-soft: #9AA5AC;
+    --ink-faint: rgba(255,196,184,0.65);
+    --teal: #F69197;
+    --teal-tint: rgba(246,145,151,0.16);
+    --gold: #F69197;
+    --line: rgba(116,131,140,0.35);
 
     --radius: 3px;
     --max: 1100px;
-    color-scheme: light;
+    color-scheme: dark;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
     background:radial-gradient(circle at 50% -10%, var(--surface), var(--bg) 60%);
-    color:var(--ink);
+    color:var(--text);
     font-family:'IBM Plex Sans', -apple-system, sans-serif;
     font-size:16px;
     line-height:1.6;
@@ -97,7 +98,7 @@
   /* ---- nav ---- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(251,245,239,0.88);
+    background:rgba(40,45,60,0.88);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -124,7 +125,7 @@
   .hero-photo{
     display:block; width:88px; height:88px; flex-shrink:0;
     border-radius:50%; object-fit:cover;
-    border:3px solid var(--surface); box-shadow:0 4px 18px rgba(39,39,68,0.18);
+    border:3px solid var(--surface); box-shadow:0 4px 18px rgba(246,145,151,0.18);
   }
   .hero .eyebrow{justify-content:center;}
   .hero .eyebrow::after{content:""; width:22px; height:1px; background:var(--teal);}
@@ -142,10 +143,10 @@
     display:inline-block; transition:all .15s ease;
     border:1px solid var(--ink);
   }
-  .btn.solid{background:var(--ink); color:var(--bg);}
-  .btn.solid:hover{background:var(--teal); border-color:var(--teal);}
-  .btn.outline{color:var(--ink); border-color:var(--line); background:transparent;}
-  .btn.outline:hover{border-color:var(--ink);}
+  .btn.solid{background:var(--teal); color:var(--ink); border-color:transparent;}
+  .btn.solid:hover{filter:brightness(1.08);}
+  .btn.outline{color:var(--teal); border-color:var(--teal); background:transparent;}
+  .btn.outline:hover{background:var(--teal); color:var(--ink);}
 
   section{padding:64px 0;}
   .section-head{margin-bottom:36px; text-align:center;}
@@ -254,7 +255,7 @@
   .play-btn{
     all:unset; position:absolute; inset:0; z-index:1;
     display:flex; align-items:center; justify-content:center;
-    cursor:pointer; background:rgba(39,39,68,0.12);
+    cursor:pointer; background:rgba(40,45,60,0.12);
   }
   .play-btn .play-icon{
     width:56px; height:56px; border-radius:50%;
@@ -286,7 +287,7 @@
   /* ---- contact ---- */
   #contact{padding-bottom:110px;}
   .contact-card{
-    background:var(--ink); color:var(--bg); border-radius:var(--radius);
+    background:var(--surface); color:var(--text); border-radius:var(--radius);
     padding:52px 44px; display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;
   }
   .contact-card h2{color:#fff; font-size:28px; max-width:38ch;}
