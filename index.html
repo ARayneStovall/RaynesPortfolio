@@ -538,9 +538,8 @@
         </div>
       </div>
       <div id="gaugecalc-last-shipped" style="display:none; font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); margin:0 0 6px;"></div>
-      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A tool for knitters and crocheters that recalculates a PDF pattern's stitch and row counts for a different gauge, stamping the corrected numbers directly onto the original pattern. Knitting and crocheting are genuine hobbies of mine — this started as a way to solve my own gauge-swapping headaches, not just a demo topic.</p>
-      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Claude parses the raw pattern text into structured gauge and section data; deterministic code handles the actual rescaling and rounding math. A React frontend uploads the pattern and gauge to an Express backend, which extracts, rescales, and stamps the corrected values back onto the original PDF at the right position.</p>
-      <p style="color:var(--ink-soft); font-size:14.5px; margin:9px 0 0;">Still working out edge cases: stamp alignment drifts on multi-column patterns, and increases/decreases aren't handled yet.</p>
+      <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A tool for knitters and crocheters that recalculates a PDF pattern's stitch and row counts for a different gauge and stamps the corrected numbers directly onto the original pattern. Claude parses the raw pattern text into structured gauge and section data, deterministic code handles the rescaling and rounding math, and a React frontend talks to an Express backend that stamps the corrected values back onto the PDF. Knitting and crocheting are genuine hobbies of mine, this started as a way to solve my own gauge-swapping headaches, not a demo topic.</p>
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Still working out edge cases: stamp alignment drifts on multi-column patterns, and increases and decreases aren't handled yet.</p>
 
       <div class="case-video">
         <a href="https://gaugecalculator.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live gaugeCalc site">
