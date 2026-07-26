@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#1E2B20"/>
+  <path d="M32,8 C32,8 15,30 15,39 A17,17 0 0,0 49,39 C49,30 32,8 32,8 Z" fill="#A98B4E" opacity="0.55"/>
   <text x="25" y="46" font-family="Didot, 'Bodoni MT', Georgia, serif" font-style="italic" font-size="34" fill="#F6F7F1" text-anchor="middle">R</text>
-  <path d="M45,14 C45,14 37,26 37,31 A8,8 0 0,0 53,31 C53,26 45,14 45,14 Z" fill="#A98B4E"/>
 </svg>
