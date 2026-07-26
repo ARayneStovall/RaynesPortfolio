@@ -69,17 +69,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #FFFFFF;
-    --surface: rgba(156,44,92,0.035);
-    --ink: #23102B;
-    --text: #23102B;
-    --ink-soft: #5C4166;
-    --ink-faint: #8B7291;
-    --teal: #9C2C5C;
-    --teal-tint: rgba(156,44,92,0.08);
-    --gold: #A67C3D;
-    --line: rgba(35,16,43,0.14);
-    --panel: #3D153F;
+    --bg: #F6F7F1;
+    --surface: rgba(79,122,91,0.05);
+    --ink: #1E2B20;
+    --text: #1E2B20;
+    --ink-soft: #445C48;
+    --ink-faint: #527058;
+    --teal: #4F7A5B;
+    --teal-tint: rgba(79,122,91,0.12);
+    --gold: #A98B4E;
+    --line: rgba(79,122,91,0.20);
+    --panel: #1E2B20;
 
     --radius: 3px;
     --max: 1100px;
@@ -87,16 +87,16 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg: #241030;
-      --surface: #3A1A40;
-      --text: #F3E9F0;
-      --ink-soft: rgba(243,233,240,0.72);
-      --ink-faint: rgba(243,233,240,0.55);
-      --teal: #E0729B;
-      --teal-tint: rgba(224,114,155,0.16);
-      --gold: #D9A857;
-      --line: rgba(243,233,240,0.16);
-      --panel: #4A2350;
+      --bg: #141F16;
+      --surface: #2B3A26;
+      --text: #EDEFE3;
+      --ink-soft: rgba(237,239,227,0.72);
+      --ink-faint: rgba(237,239,227,0.55);
+      --teal: #7FAE86;
+      --teal-tint: rgba(127,174,134,0.16);
+      --gold: #C9A659;
+      --line: rgba(237,239,227,0.16);
+      --panel: #33422C;
     }
   }
   *{box-sizing:border-box;}
@@ -127,12 +127,12 @@
   /* ---- nav ---- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(255,255,255,0.88);
+    background:rgba(246,247,241,0.88);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
   @media (prefers-color-scheme: dark){
-    header{background:rgba(36,16,48,0.88);}
+    header{background:rgba(20,31,22,0.88);}
   }
   nav{
     display:flex; align-items:center; justify-content:space-between;
@@ -292,7 +292,7 @@
   .play-btn{
     all:unset; position:absolute; inset:0; z-index:1;
     display:flex; align-items:center; justify-content:center;
-    cursor:pointer; background:rgba(35,16,43,0.12);
+    cursor:pointer; background:rgba(30,43,32,0.12);
   }
   .play-btn .play-icon{
     width:56px; height:56px; border-radius:50%;
