@@ -417,8 +417,8 @@
     <div class="grid">
       <div>
         <p>I design systems where LLMs handle judgment and deterministic code handles precision. At Notable Systems, I built LLM prompts and boolean rules that power automated approval and denial recommendations for healthcare insurance platforms, then wrote Python and shell scripts to test that logic at scale before deployment.</p>
-        <p>My major, Media Arts &amp; Sciences with a Computer Science concentration at Wellesley, blends CS with human-centered design and media production. The user research on LinguaGemma and the engineering work at Notable Systems and gaugeCalc both come out of that same training. Much of my work involves converting client criteria, originally intended for human reviewers, into logic that operates reliably and autonomously. My ability to clarify ambiguity began with UX research and was further refined through teaching K-1 science. My senior project, LinguaGemma, received a CHI undergraduate research award for examining how users truly learn from a system, beyond its intended instructional design.</p>
-        <p>I took the same approach building gaugeCalc, a tool I made to recalculate knitting patterns. Claude converts unstructured pattern text into structured data, and deterministic code handles the actual rescaling and rounding math, so the numbers that need to be right are always accurate.</p>
+        <p>My major, Media Arts &amp; Sciences with a Computer Science concentration at Wellesley, is why I keep landing on that same split. LinguaGemma, my CHI award-winning senior project, and gaugeCalc both come from the same instinct: take criteria built for a human reviewer and turn it into logic that runs on its own. My ability to clarify ambiguity was sharpened by teaching K-1 science.</p>
+        <p>gaugeCalc is the clearest version of that. Claude parses a knitting pattern's messy, unstructured text into structured data, and deterministic code handles the actual rescaling and rounding math, so the numbers that need to be right are always right.</p>
         <p>I'm looking for AI systems engineering and LLM application development roles.</p>
       </div>
       <ul class="fact-list">
@@ -469,7 +469,7 @@
 
           <blockquote style="margin:20px 0 0; padding:16px 20px; border-left:2px solid var(--teal); background:var(--surface); border-radius:0 var(--radius) var(--radius) 0;">
             <p style="font-family:'Newsreader', serif; font-style:italic; font-size:15px; line-height:1.55; color:var(--ink-soft); margin:0 0 8px;">
-              "She had a consistent sense of how to structure complicated medical criteria into prompts that returned what we were after — which is harder than it sounds and something plenty of people struggle with."
+              "Reworking naming conventions that had to hold up across hundreds of rules spanning dozens of clients and payors, covering nearly the full range of durable medical equipment categories... she took all of this on with very little hand-holding."
             </p>
             <cite style="font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-faint); font-style:normal;">
               — <a href="https://www.linkedin.com/in/alex-kechichian-6aa71a37b/" target="_blank" rel="noopener" style="color:var(--teal); border-bottom:1px solid var(--teal-tint); text-decoration:none;">Alex Kechichian</a>, AI Prompt Engineer, Notable Systems
@@ -528,11 +528,11 @@
     </div>
 
     <div class="case">
-      <span class="case-badge">Full-Stack Web App · LLM + Deterministic Logic · Work in Progress</span>
+      <span class="case-badge" id="gaugecalc-badge">Full-Stack Web App · LLM + Deterministic Logic</span>
       <div class="case-head">
         <h3>gaugeCalc</h3>
         <div class="case-meta">
-          <div class="when">2026 — in progress</div>
+          <div class="when">2026 — present</div>
           <a class="case-link" href="https://gaugecalculator.vercel.app/" target="_blank" rel="noopener">Live site ↗</a>
           <a class="case-link" href="https://github.com/ARayneStovall/gauge-calc" target="_blank" rel="noopener">View repo ↗</a>
         </div>
@@ -736,6 +736,11 @@
   function closeLightbox(){
     document.getElementById('lightbox').classList.remove('open');
   }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.getElementById('lightbox').classList.contains('open')) {
+      closeLightbox();
+    }
+  });
 
   function playVideo(btn){
     const video = btn.previousElementSibling;
@@ -751,12 +756,13 @@
       const data = await res.json();
       const date = new Date(data.commit.author.date);
       const formatted = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      document.getElementById('gaugecalc-badge').textContent += ' · Actively Maintained';
       const el = document.getElementById('gaugecalc-last-shipped');
-      el.textContent = `Actively maintained — last shipped ${formatted}`;
+      el.textContent = `Last shipped ${formatted}`;
       el.style.display = 'block';
     } catch (err) {
       // Fetch failed (rate limit, network issue, repo renamed, etc.) — leave
-      // the case-badge's "Work in Progress" label as the only status shown.
+      // the badge as its plain descriptive text with no status claim.
     }
   })();
 </script>
