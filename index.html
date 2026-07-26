@@ -228,12 +228,6 @@
   .case-head{display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:18px; flex-wrap:wrap;}
   .case-head h3{font-size:23px;}
 
-  #creative{padding-top:24px;}
-  #creative .section-head{margin-bottom:24px;}
-  #creative .section-head h2{font-size:20px;}
-  .creative-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
-  .case--compact{margin-bottom:0;}
-  .case--compact h3{font-size:19px;}
   .case-head .when{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); white-space:nowrap; padding-top:6px;}
   .case-meta{display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-top:6px;}
   .case-meta .when{padding-top:0;}
@@ -349,7 +343,6 @@
   @media (max-width:760px){
     .hero-intro{flex-direction:column; text-align:center;}
     #about .grid{grid-template-columns:1fr;}
-    .creative-grid{grid-template-columns:1fr;}
     .skill-grid{grid-template-columns:1fr;}
     .role-item{grid-template-columns:1fr; gap:6px;}
     .contact-card{flex-direction:column; align-items:flex-start;}
@@ -571,40 +564,6 @@
 
   </section>
 
-  <section id="creative" class="reveal">
-    <div class="section-head">
-      <div class="eyebrow">Also</div>
-      <h2>Other creative work.</h2>
-    </div>
-    <div class="creative-grid">
-      <div class="case case--compact">
-        <span class="case-badge">Game Design · Unity · Team of 2</span>
-        <h3>In A Jam!</h3>
-        <p style="color:var(--ink-soft); font-size:14.5px; margin:6px 0 0;">A 3D game where the player gets pulled into a printer mid-jam and has to navigate the town of Toneronto.</p>
-        <div class="case-video" style="margin-top:16px;">
-          <video playsinline preload="none" poster="media/in-a-jam-poster.jpg">
-            <source src="media/in-a-jam.mp4" type="video/mp4">
-          </video>
-          <button type="button" class="play-btn" aria-label="Play In A Jam! demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
-        </div>
-        <div class="stack" style="margin-top:14px;"><span>Unity</span><span>C#</span><span>3D Animation</span></div>
-      </div>
-
-      <div class="case case--compact">
-        <span class="case-badge">3D Web · Three.js · Team of 2</span>
-        <h3>Interactive Vending Machine</h3>
-        <p style="color:var(--ink-soft); font-size:14.5px; margin:6px 0 0;">A fully modeled, animated 3D vending machine for the web, with dynamic lighting and a hand-tuned door-opening sequence.</p>
-        <div class="case-video" style="margin-top:16px;">
-          <video playsinline preload="none" poster="media/vending-machine-poster.jpg">
-            <source src="media/vending-machine.mp4" type="video/mp4">
-          </video>
-          <button type="button" class="play-btn" aria-label="Play Interactive Vending Machine demo" onclick="playVideo(this)"><span class="play-icon"></span></button>
-        </div>
-        <div class="stack" style="margin-top:14px;"><span>Three.js</span><span>JavaScript</span><span>WebGL</span></div>
-      </div>
-    </div>
-  </section>
-
   <section id="skills" class="reveal">
     <div class="section-head">
       <div class="eyebrow">Toolkit</div>
@@ -639,15 +598,12 @@
         </ul>
       </div>
       <div class="skill-col">
-        <div class="eyebrow">Frameworks &amp; Creative</div>
+        <div class="eyebrow">Frameworks</div>
         <ul>
           <li>React</li>
           <li>Node.js &amp; Express</li>
           <li>Three.js</li>
           <li>Unity</li>
-          <li>Figma</li>
-          <li>Adobe Creative Cloud</li>
-          <li>Autodesk Maya</li>
         </ul>
       </div>
       <div class="skill-col">
