@@ -253,6 +253,7 @@
     border-radius:2px; overflow:hidden; margin-top:20px; border:1px solid var(--line); line-height:0;
   }
   .case-video video{width:100%; display:block; max-height:380px; object-fit:cover;}
+  .case-video img{width:100%; display:block; max-height:380px; object-fit:contain; background:#1F0510;}
 
   .poster-wrap{margin-top:20px;}
   .poster-btn{
@@ -517,6 +518,14 @@
       <p style="color:var(--ink-soft); max-width:64ch; margin:0 0 6px;">A tool for knitters and crocheters that recalculates a PDF pattern's stitch and row counts for a different gauge, stamping the corrected numbers directly onto the original pattern. Knitting and crocheting are genuine hobbies of mine — this started as a way to solve my own gauge-swapping headaches, not just a demo topic.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:16px 0 0;">Claude parses the raw pattern text into structured gauge and section data; deterministic code handles the actual rescaling and rounding math. A React frontend uploads the pattern and gauge to an Express backend, which extracts, rescales, and stamps the corrected values back onto the original PDF at the right position.</p>
       <p style="color:var(--ink-soft); font-size:14.5px; margin:9px 0 0;">Still working out edge cases: stamp alignment drifts on multi-column patterns, and increases/decreases aren't handled yet.</p>
+
+      <div class="case-video">
+        <a href="https://gaugecalculator.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live gaugeCalc site">
+          <img src="media/gaugecalc-preview.jpg" alt="Screenshot of the gaugeCalc web app" loading="lazy" width="1000" height="640">
+        </a>
+      </div>
+      <div class="media-cap">Live preview — click to open gaugecalculator.vercel.app</div>
+
       <div class="stack" style="margin-top:16px;"><span>TypeScript</span><span>Node.js</span><span>Express</span><span>React</span><span>Claude API</span><span>pdfjs-dist</span><span>pdf-lib</span></div>
     </div>
 
