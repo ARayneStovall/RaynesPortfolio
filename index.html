@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abby Rayne Stovall — AI Engineer</title>
-<meta name="description" content="Abby Rayne Stovall — AI Engineer. Portfolio of LLM prompt engineering and hybrid LLM + deterministic systems work.">
+<meta name="description" content="AI Engineer specializing in LLM prompt engineering and hybrid LLM + deterministic systems.">
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Abby Rayne Stovall — AI Engineer">
@@ -111,6 +111,14 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
+  .skip-link{
+    position:absolute; top:-100%; left:12px;
+    background:var(--panel); color:#fff;
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+    padding:10px 16px; border-radius:2px; z-index:100;
+    text-decoration:none; transition:top .15s ease;
+  }
+  .skip-link:focus{top:12px;}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
   h1,h2,h3{font-family:'Newsreader', serif; font-weight:500; margin:0; letter-spacing:-0.01em;}
   .eyebrow{
@@ -349,6 +357,8 @@
   .reveal.in{opacity:1; transform:translateY(0);}
 
   @media (max-width:760px){
+    nav{flex-wrap:wrap; row-gap:10px;}
+    .nav-links{gap:14px; flex-wrap:wrap;}
     .hero-intro{flex-direction:column; text-align:center;}
     #about .grid{grid-template-columns:1fr;}
     .creative-grid{grid-template-columns:1fr;}
@@ -366,6 +376,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header>
   <nav>
     <span class="nav-name">ABBY RAYNE STOVALL</span>
@@ -379,7 +391,7 @@
   </nav>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
 
   <section class="hero">
     <div class="eyebrow">AI Engineer</div>
@@ -554,7 +566,7 @@
 
       <div class="poster-wrap">
         <button type="button" class="poster-btn" onclick="openLightbox(this.querySelector('img'))">
-          <img src="media/linguagemma-poster.png" alt="Full LinguaGemma research poster" loading="lazy" width="3000" height="2250">
+          <img src="media/linguagemma-poster-preview.jpg" data-full="media/linguagemma-poster.png" alt="Full LinguaGemma research poster" loading="lazy" width="1200" height="900">
           <span class="cap">Full research poster. Click to enlarge.</span>
         </button>
       </div>
@@ -706,7 +718,7 @@
 
   function openLightbox(img){
     const lightboxImg = document.getElementById('lightbox-img');
-    lightboxImg.src = img.src;
+    lightboxImg.src = img.dataset.full || img.src;
     lightboxImg.alt = img.alt;
     document.getElementById('lightbox').classList.add('open');
   }
